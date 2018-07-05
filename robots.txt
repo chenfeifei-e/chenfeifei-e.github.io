@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://chenfeifei-e.github.io/sitemap.xml
-Sitemap: https://chenfeifei-e.github.io/baidusitemap.xml
+Sitemap: https://www.mumingxi.cn/sitemap.xml
+Sitemap: https://www.mumingxi.cn/baidusitemap.xml
