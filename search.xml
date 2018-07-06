@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[mongodb数据导入导出]]></title>
+    <url>%2Fmuming.html</url>
+    <content type="text"><![CDATA[命令通用1234-h host 主机--port port 端口-u username 用户名-p passwd 密码 mongoexport 123456-d 库名-c 表名-f field1,field2...列名-q 查询条件-o 导出的文件名--type=csv 导出csv格式(便于和传统数据库交换数据) mongoimport 1234-d 待导入的数据库-c 待导入的表(不存在会自己创建)--type csv/json(默认)--file 备份文件路径 mongodump 导出二进制bson结构的数据及其索引信息 12345-d 库名-c 表名-f field1,field2...列名mongodump -d test [-c 表名] 默认是导出到mongo下的dump目录 导出的文件放在以database命名的目录下 每个表导出2个文件,分别是bson结构的数据文件, json的索引信息 如果不声明表名, 导出所有的表 mongorestore -h IP –port 端口 -u 用户名 -p 密码 -d 数据库 –drop 文件存在路径 –drop的意思是，先删除所有的记录，然后恢复 12mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径--drop的意思是，先删除所有的记录，然后恢复]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mongodb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2Fhello-world.html</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
