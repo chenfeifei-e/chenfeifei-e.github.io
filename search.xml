@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node-mysql使用心得]]></title>
+    <url>%2Fnode-mysql%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97.html</url>
+    <content type="text"><![CDATA[mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢12345678910111213141516let query=[];let params=[];if(start_time)&#123;query.push(&quot;a.create_time &gt; ?&quot;);params.push(start_time);&#125;if(end_time)&#123;query.push(&quot;a.create_time &lt; ?&quot;);params.push(end_time);&#125;if(density_id)&#123;query.push(&quot;a.density_id = ?&quot;);params.push(density_id);&#125;query = query.join(&quot; and &quot;);let [handing_off_res] = await db_mysql.connection.query(`SELECT a.*, b.username create_username FROM $&#123;db_mysql.databaseFirseName+netbar_id&#125;.handing_off a LEFT JOIN $&#123;db_mysql.commonDatabase&#125;.netbar_user b ON a.create_user = b.user_id WHERE $&#123;query&#125; LIMIT $&#123;skip&#125;,$&#123;page_size&#125;`,[...params]); 用sql语句插入多个数据时，因为数据时中文，加一个引号才能添加，这里明明ruturn的是一个字符串123456789101112131415const categoryArr = [&quot;餐吧&quot;,&quot;水吧&quot;,&quot;副食&quot;,&quot;酒水&quot;,&quot;香烟&quot;]const initNetbarCategory = async(netbar_id)=&gt;&#123; try&#123; // ********************** 这里要加&apos;&apos; 无语 let saveMsg = categoryArr.map(item=&gt;&#123; return `(&apos;$&#123;item&#125;&apos;)` &#125;) await db_mysql.pool[db_mysql.databaseFirseName+netbar_id].query(`INSERT INTO category (category_name) VALUES $&#123;saveMsg&#125;`); return; &#125;catch(err)&#123; console.error(err,&apos;err&apos;) &#125;&#125;]]></content>
+      <categories>
+        <category>nodejs</category>
+      </categories>
+      <tags>
+        <tag>node-mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ant-design使用中出现的问题]]></title>
+    <url>%2Fant-design%E4%BD%BF%E7%94%A8%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</url>
+    <content type="text"><![CDATA[react,导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef 才能获取1&lt;Goods wrappedComponentRef=&#123;child=&gt;this[&quot;child&quot;+item.category_id] = child&#125; changeChooseList=&#123;this.changeChooseList&#125; category_id=&#123;item.category_id&#125;&gt; &lt;/Goods&gt;]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[js常见兼容问题]]></title>
     <url>%2Fjs%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</url>
     <content type="text"><![CDATA[window.open会在firefox中无法跳转 a链接下载1234var a = document.createElement("a");a.href = url;a.download();//此方法在irefox中无法下载]]></content>
@@ -14,7 +36,7 @@
   <entry>
     <title><![CDATA[css常见兼容问题]]></title>
     <url>%2Fcss%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</url>
-    <content type="text"><![CDATA[user-select 在safiare会导致input框无法输入]]></content>
+    <content type="text"><![CDATA[user-select 在safari会导致input框无法输入]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -31,17 +53,6 @@
       </categories>
       <tags>
         <tag>mongodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fhello-world.html</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
 </search>
