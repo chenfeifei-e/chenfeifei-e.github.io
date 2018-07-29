@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://www.mumingxi.cn/node-mysql%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97.html</loc>
+    <lastmod>2018-07-29T09:23:17.945Z</lastmod>
+    <data>
+        <display>
+        <title>node-mysql使用心得</title>
+        <pubTime>2018-07-29T08:49:53.000Z</pubTime>
+        
+        <tag>node-mysql</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodejs" url="https://www.mumingxi.cn/categories/nodejs/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.mumingxi.cn/mongodb%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</loc>
     <lastmod>2018-07-29T09:19:00.162Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="数据库" url="https://www.mumingxi.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.mumingxi.cn/node-mysql%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97.html</loc>
-    <lastmod>2018-07-29T09:18:48.448Z</lastmod>
-    <data>
-        <display>
-        <title>node-mysql使用心得</title>
-        <pubTime>2018-07-29T08:49:53.000Z</pubTime>
-        
-        <tag>node-mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="nodejs" url="https://www.mumingxi.cn/categories/nodejs/"/>
           
         </display>
     </data>
