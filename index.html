@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  241
+                  240
                 </span>
               
 
@@ -448,12 +448,14 @@
 
       
         
-          
-            <h4 id="mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢"><a href="#mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢" class="headerlink" title="mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢"></a>mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢</h4><p>&lt; !–more–&gt; </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let query=[];</span><br><span class="line">let params=[];</span><br><span class="line">if(start_time)&#123;</span><br><span class="line">    query.push(&quot;a.create_time &gt; ?&quot;);</span><br><span class="line">    params.push(start_time);</span><br><span class="line">&#125;</span><br><span class="line">if(end_time)&#123;</span><br><span class="line">    query.push(&quot;a.create_time &lt; ?&quot;);</span><br><span class="line">    params.push(end_time);</span><br><span class="line">&#125;</span><br><span class="line">if(density_id)&#123;</span><br><span class="line">    query.push(&quot;a.density_id = ?&quot;);</span><br><span class="line">    params.push(density_id);</span><br><span class="line">&#125;</span><br><span class="line">query = query.join(&quot; and &quot;);</span><br><span class="line">let [handing_off_res] = await db_mysql.connection.query(`SELECT a.*, b.username create_username  FROM $&#123;db_mysql.databaseFirseName+netbar_id&#125;.handing_off a LEFT JOIN $&#123;db_mysql.commonDatabase&#125;.netbar_user b ON a.create_user = b.user_id WHERE $&#123;query&#125; LIMIT $&#123;skip&#125;,$&#123;page_size&#125;`,[...params]);</span><br></pre></td></tr></table></figure>
-<h4 id="用sql语句插入多个数据时，因为数据时中文，加一个引号才能添加，这里明明ruturn的是一个字符串"><a href="#用sql语句插入多个数据时，因为数据时中文，加一个引号才能添加，这里明明ruturn的是一个字符串" class="headerlink" title="用sql语句插入多个数据时，因为数据时中文，加一个引号才能添加，这里明明ruturn的是一个字符串"></a>用sql语句插入多个数据时，因为数据时中文，加一个引号才能添加，这里明明ruturn的是一个字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const categoryArr = [&quot;餐吧&quot;,&quot;水吧&quot;,&quot;副食&quot;,&quot;酒水&quot;,&quot;香烟&quot;]</span><br><span class="line"></span><br><span class="line">const initNetbarCategory = async(netbar_id)=&gt;&#123;</span><br><span class="line">    try&#123;</span><br><span class="line">          // ********************** 这里要加&apos;&apos; 无语 </span><br><span class="line">        let saveMsg = categoryArr.map(item=&gt;&#123;</span><br><span class="line">            return `(&apos;$&#123;item&#125;&apos;)`</span><br><span class="line">        &#125;)</span><br><span class="line">        await db_mysql.pool[db_mysql.databaseFirseName+netbar_id].query(`INSERT INTO category (category_name) VALUES $&#123;saveMsg&#125;`);</span><br><span class="line">        return;</span><br><span class="line">    &#125;catch(err)&#123;</span><br><span class="line">        console.error(err,&apos;err&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <h4 id="mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢"><a href="#mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢" class="headerlink" title="mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢"></a>mysql做条件查询时，where语句查询时，若有多个条件，但是有的条件可以不传，有的值可能时undegind，但是如何用一个语句就可以查询呢</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/node-mysql使用心得.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -590,7 +592,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  79
+                  78
                 </span>
               
 
@@ -628,10 +630,14 @@
 
       
         
-          
-            <h4 id="react-导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef-才能获取"><a href="#react-导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef-才能获取" class="headerlink" title="react,导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef 才能获取"></a>react,导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef 才能获取</h4><p>&lt; !–more–&gt;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Goods wrappedComponentRef=&#123;child=&gt;this[&quot;child&quot;+item.category_id] = child&#125; changeChooseList=&#123;this.changeChooseList&#125; category_id=&#123;item.category_id&#125;&gt; &lt;/Goods&gt;</span><br></pre></td></tr></table></figure></p>
-
-          
+          <h4 id="react-导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef-才能获取"><a href="#react-导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef-才能获取" class="headerlink" title="react,导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef 才能获取"></a>react,导出组件时，若导出的是一个不是本身，是redux或者form包裹组件时，父组件想调用子组件的方法时，通过refs是不能获取到子组件的方法，要通过wrappedComponentRef 才能获取</h4>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/ant-design使用中出现的问题.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1162,29 +1168,14 @@
 
       
         
-          
-            <h3 id="命令通用"><a href="#命令通用" class="headerlink" title="命令通用"></a>命令通用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-h host   主机</span><br><span class="line">--port port    端口</span><br><span class="line">-u username 用户名</span><br><span class="line">-p passwd   密码</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h4 id="mongoexport"><a href="#mongoexport" class="headerlink" title="mongoexport"></a>mongoexport</h4></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-d  库名</span><br><span class="line">-c  表名</span><br><span class="line">-f  field1,field2...列名</span><br><span class="line">-q  查询条件</span><br><span class="line">-o  导出的文件名</span><br><span class="line">--type=csv  导出csv格式(便于和传统数据库交换数据)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h4 id="mongoimport"><a href="#mongoimport" class="headerlink" title="mongoimport"></a>mongoimport</h4></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-d 待导入的数据库</span><br><span class="line">-c 待导入的表(不存在会自己创建)</span><br><span class="line">--type  csv/json(默认)</span><br><span class="line">--file 备份文件路径</span><br></pre></td></tr></table></figure>
-<blockquote>
-<h4 id="mongodump-导出二进制bson结构的数据及其索引信息"><a href="#mongodump-导出二进制bson结构的数据及其索引信息" class="headerlink" title="mongodump 导出二进制bson结构的数据及其索引信息"></a>mongodump 导出二进制bson结构的数据及其索引信息</h4></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-d  库名</span><br><span class="line">-c  表名</span><br><span class="line">-f  field1,field2...列名</span><br><span class="line"></span><br><span class="line">mongodump -d test  [-c 表名]  默认是导出到mongo下的dump目录</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>导出的文件放在以database命名的目录下</p>
-</li>
-<li><p>每个表导出2个文件,分别是bson结构的数据文件, json的索引信息</p>
-</li>
-<li><p>如果不声明表名, 导出所有的表</p>
-</li>
-</ol>
-<blockquote>
-<h4 id="mongorestore-h-IP-–port-端口-u-用户名-p-密码-d-数据库-–drop-文件存在路径-–drop的意思是，先删除所有的记录，然后恢复"><a href="#mongorestore-h-IP-–port-端口-u-用户名-p-密码-d-数据库-–drop-文件存在路径-–drop的意思是，先删除所有的记录，然后恢复" class="headerlink" title="mongorestore -h IP –port 端口 -u 用户名 -p 密码 -d 数据库 –drop 文件存在路径 –drop的意思是，先删除所有的记录，然后恢复"></a>mongorestore -h IP –port 端口 -u 用户名 -p 密码 -d 数据库 –drop 文件存在路径 –drop的意思是，先删除所有的记录，然后恢复</h4></blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径</span><br><span class="line">--drop的意思是，先删除所有的记录，然后恢复</span><br></pre></td></tr></table></figure>
-          
+          <h3 id="命令通用"><a href="#命令通用" class="headerlink" title="命令通用"></a>命令通用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-h host   主机</span><br><span class="line">--port port    端口</span><br><span class="line">-u username 用户名</span><br><span class="line">-p passwd   密码</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/mongodb数据导入导出.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1364,7 +1355,7 @@
 </div>
 
 <div class="theme-info">
-  <span class="post-count">博客全站共676字</span>
+  <span class="post-count">博客全站共674字</span>
 </div>
 
 <div class="theme-info">
