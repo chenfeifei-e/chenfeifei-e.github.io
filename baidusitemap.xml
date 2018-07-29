@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>https://www.mumingxi.cn/hello-world.html</loc>
+    <lastmod>2018-07-10T03:36:57.098Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-07-03T07:46:36.785Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://www.mumingxi.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.mumingxi.cn/js%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</loc>
+    <lastmod>2018-07-10T03:36:53.867Z</lastmod>
+    <data>
+        <display>
+        <title>js常见兼容问题</title>
+        <pubTime>2018-07-10T03:34:01.000Z</pubTime>
+        
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://www.mumingxi.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.mumingxi.cn/css%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</loc>
+    <lastmod>2018-07-10T03:33:54.198Z</lastmod>
+    <data>
+        <display>
+        <title>css常见兼容问题</title>
+        <pubTime>2018-07-10T03:31:54.000Z</pubTime>
+        
+        <tag>css</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端" url="https://www.mumingxi.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.mumingxi.cn/mongodb%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</loc>
     <lastmod>2018-07-06T06:05:07.682Z</lastmod>
     <data>
@@ -17,26 +77,6 @@
            
              
               <breadCrumb title="数据库" url="https://www.mumingxi.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.mumingxi.cn/hello-world.html</loc>
-    <lastmod>2018-07-04T14:07:15.110Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-07-03T07:46:36.785Z</pubTime>
-        
-        <tag>js</tag>
-         
-         
-           
-             
-              <breadCrumb title="前端" url="https://www.mumingxi.cn/categories/%E5%89%8D%E7%AB%AF/"/>
           
         </display>
     </data>

@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.mumingxi.cn/mongodb%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</loc>
+    <loc>https://www.mumingxi.cn/hello-world.html</loc>
     
-    <lastmod>2018-07-06T06:05:07.682Z</lastmod>
+    <lastmod>2018-07-10T03:36:57.098Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.mumingxi.cn/hello-world.html</loc>
+    <loc>https://www.mumingxi.cn/js%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</loc>
     
-    <lastmod>2018-07-04T14:07:15.110Z</lastmod>
+    <lastmod>2018-07-10T03:36:53.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mumingxi.cn/css%E5%B8%B8%E8%A7%81%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98.html</loc>
+    
+    <lastmod>2018-07-10T03:33:54.198Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.mumingxi.cn/mongodb%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</loc>
+    
+    <lastmod>2018-07-06T06:05:07.682Z</lastmod>
     
   </url>
   

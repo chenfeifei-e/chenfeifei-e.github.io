@@ -1934,7 +1934,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8b7585;
+  background: #60c98c;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2064,11 +2064,13 @@ img:hover {
 .footer-inner {
   text-align: center;
 }
-.footer-inner .coding-svg {
-  display: none;
-}
-.footer-inner github-corner {
-  display: none;
+@media screen and (max-width: 800px) {
+  .coding-svg {
+    display: none;
+  }
+  .github-corner {
+    display: none;
+  }
 }
 .with-love {
   display: inline-block;
